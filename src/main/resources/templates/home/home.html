@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${header}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+	<img class="icono" th:src="@{/images/} + 'spring.png'" />
+	<h1 th:text="${titulo}"></h1>
+	<div th:utext="${lorem}"></div>
+	<div style="text-align: center;">
+		<p><i th:text="${proverbioCH}"></i></p>
+	</div>
+	<div style="text-align: center;">
+		<p><i th:text="${proverbioSP}"></i></p>
+	</div>
+	<ul>
+		<li><a th:href="@{/loto/menu}">Loto</a></li>
+		<li><a th:href="@{/libros/listar}">Libros</a></li>
+		<li><a th:href="@{/ciudades/un-test}">Adivina la ciudad</a></li>
+	</ul>
+</body>
+
+</html>

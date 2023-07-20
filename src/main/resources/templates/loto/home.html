@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${header}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+	<h1 th:text="${titulo}"></h1>
+
+	<ul>
+		<li><a th:href="@{/loto/genera/49/6/spain}">Loto española</a></li>
+		<li><a th:href="@{/loto/genera/49/6/germany}">Loto alemana</a></li>
+		<li><a th:href="@{/loto/genera/49/5/france}">Loto francesa</a></li>
+		<li><a th:href="@{/loto/genera/90/6/italy}">Loto italiana</a></li>
+	</ul>
+	<a th:href="@{/}">Home</a>
+</body>
+
+</html>

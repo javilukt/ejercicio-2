@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+h1 {
+	color: red;
+}
+
+p {
+	color: blue;
+}
+img.icono {
+	max-height: 100px;
+}
+
+img {
+	max-height: 300px;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	/* Margen automático para centrar horizontalmente */
+
+}
+
+td,
+th {
+	border: 1px solid darkgray;
+	padding: 8px;
+	text-align: center;
+}

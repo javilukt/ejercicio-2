@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${header}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+
+<body>
+	<h1 th:text="${titulo}"></h1>
+	<table>
+		<theader>
+			<tr>
+				<td><strong>Título</strong></td>
+				<td><strong>Autor</strong></td>
+				<td><strong>Género</strong></td>
+				<td><strong>Cantidad</strong></td>
+			</tr>
+		</theader>
+		<tbody>
+			<tr th:each="libro : ${libros}">
+				<td>
+					<a th:href="@{/libros/titulo/} + ${libro.titulo}">
+						
+						<span th:text="${libro.titulo}"></span>
+					</a>
+				</td>
+				
+				
+				<td>
+					<a th:href="@{/libros/listar/autor/} + ${libro.autor}">
+						
+						<span th:text="${libro.autor}"></span>
+					</a>
+				</td>
+				<td>
+					<a th:href="@{/libros/listar/genero/} + ${libro.genero.descripcion}">
+						
+						<span th:text="${libro.genero.descripcion}"></span>
+					</a>
+				</td>
+				<td>						
+						<span th:text="${libro.cantidad}"></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div th:if="${volverAHome}"><a th:href="@{/}">Home</a></div>
+	<div th:if="${!volverAHome}"><a th:href="@{/libros/listar}">Listado completo</a></div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${header}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+	<h1 th:text="${titulo}"></h1>	
+
+	<ul>
+		<li th:text="${libro.titulo}"></li>
+		<li th:text="${libro.autor}"></li>
+		<li th:text="${libro.genero.descripcion}"></li>
+		<li th:text="${libro.cantidad}"></li>
+	</ul>
+	<a th:href="@{/libros/listar}">Listado completo</a>
+</body>
+
+</html>

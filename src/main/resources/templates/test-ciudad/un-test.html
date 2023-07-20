@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${header}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+
+<body>
+	<h1 th:text="${titulo}"></h1>
+	
+	<img th:src="@{/images/} + ${imagen} + '.jpg'" />
+	
+	<ul th:each="linea:${test}">
+		<li>
+			<a th:if="${linea[1] == null}" th:href="@{/ciudades/nok}" th:text="${linea[0]}"></a>
+			<a th:if="${linea[1] != null}" th:href="@{/ciudades/ok}" th:text="${linea[0]}"></a>
+		</li>
+	</ul>
+
+	
+	<a th:href="@{/}">Home</a>
+	<a th:href="@{/ciudades/un-test}">Adivina la ciudad</a>
+
+	
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${header}"></title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+
+<body>
+	<h1 th:text="${titulo}"></h1>
+	
+	<p th:text="${acierto}"></p>
+	
+	
+	<a th:href="@{/}">Home</a>
+	<a th:href="@{/ciudades/un-test}">Adivina la ciudad</a>
+
+	
+</body>
+
+</html>
